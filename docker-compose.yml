@@ -1,0 +1,12 @@
+services:
+  db:
+    image: postgres:17
+    container_name: novabank-db
+    env_file: .env
+    ports:
+      - "5433:5432"
+    volumes:
+      - novabank-veri:/var/lib/postgresql/data
+
+volumes:
+  novabank-veri:
